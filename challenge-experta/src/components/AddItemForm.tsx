@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { type InvoiceItem } from '../Types';
 
-interface Props { onAdd: (item: InvoiceItem) => void; }
+interface AddItemFormProps { onAdd: (item: InvoiceItem) => void; }
 
-export const AddItemForm = ({ onAdd }: Props) => {
+export const AddItemForm = ({ onAdd }: AddItemFormProps) => {
     const [product, setProduct] = useState({ name: '', qty: '1', price: '' });
 
     const handleAdd = () => {
